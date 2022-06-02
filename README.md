@@ -1,24 +1,5 @@
-# README
+# Lista de Contatos
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Olá! Meu nome pe Rafael Carvalho, sou estudante de Ciências da Computação e essa é minha página de contatos em Ruby on Rails.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Linkedin: https://www.linkedin.com/in/rafael-carvalho-b833b01a1/
