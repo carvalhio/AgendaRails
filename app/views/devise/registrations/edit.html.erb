@@ -1,0 +1,52 @@
+<h2>Editar <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <br/>
+
+  <div class="field form-group">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:"E-mail" %>
+      <br/>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field form-group">
+    
+    <%= f.password_field :nova_senha, autocomplete: "nova-senha", class:"form-control", placeholder:"nova senha" %>
+    <% if @minimum_password_length %>
+      <em></em>
+    <% end %>
+    <br/>
+  </div>
+
+  <div class="field form-group">
+        <%= f.password_field :confirmar_nova_senha, autocomplete: "confirmar nova senha", class:"form-control",placeholder:"confirmar nova senha" %>
+           <br/>
+  </div>
+
+  <div class="field form-group">
+    <%= f.password_field :senha_atual, autocomplete: "senha_atual", class:"form-control",placeholder:"senha atual" %>
+      <br/>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Atualizar", class:'btn btn-secondary' %>
+  </div>
+<% end %>
+<br/>
+
+<div class="card">
+  <div class="card-header">
+    <h4>Cancelar minha conta</h4>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Não satifeito?</h5>
+    <p class="card-text"><%= button_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:'btn btn-danger' %></p>
+  </div>
+</div>
+
+<%= link_to "Voltar", :back %>
+</br>
