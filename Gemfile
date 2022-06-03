@@ -12,6 +12,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
 gem 'devise', '~> 4.8', '>= 4.8.1'
+gem "sqlite3", "~> 1.4"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -28,7 +29,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  #gem "sqlite3", "~> 1.4"
+  gem "sqlite3", "~> 1.4"
 
 end
 
